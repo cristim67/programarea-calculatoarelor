@@ -1,11 +1,13 @@
-# Laborator 1: Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Makefile, GitHub
+# Laborator 1: Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Tipuri de variabile, Operatori
 
-## Obiective
+## Cuprins
 
 1. Familiarizarea cu mediul de dezvoltare CLion.
 2. Înțelegerea procesului de compilare și debugging.
 3. Crearea și utilizarea unui fișier Makefile pentru automatizarea compilării.
-4. Configurarea unui repository GitHub și gestionarea versiunilor de cod.
+4. Tipuri de variabile
+5. Operatori
+6. Exercitii
 
 ## 1. Introducere în CLion
 
