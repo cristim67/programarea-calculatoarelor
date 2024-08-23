@@ -2,8 +2,8 @@
 
 ## Cuprins
 
-- [Laborator 1](./lab1/README.md): Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Makefile, GitHub
-- [Laborator 2](./lab2/README.md): Tipuri de Date, Operatori, Functii matematice, Conversii de Tipuri, Conventii de cod
+- [Laborator 1](./lab1/README.md): Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Tipuri de Date, Operatori
+- [Laborator 2](./lab2/README.md): Functii matematice, Structuri de Control: if, switch, while, do-while, for
 - [Laborator 3](./lab3/README.md): Structuri de Control: if, switch, while, do-while, for
 - [Laborator 4](./lab4/README.md): Programare Modulara: Functii
 - [Laborator 5](./lab5/README.md): Operatii pe biti, Shiftari, Masca de biti
