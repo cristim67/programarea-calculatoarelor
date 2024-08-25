@@ -11,6 +11,24 @@
 Un vector este o colectie de elemente de acelasi tip de date. Elementele unui vector sunt stocate in memorie in mod
 continuu.
 
+### Reprezentarea în memorie a unui vector
+
+Un vector este reprezentat in memorie ca un bloc continuu de elemente de acelasi tip de date.
+
+```
++---+---+---+---+---+
+| 1 | 2 | 3 | 4 | 5 |
++---+---+---+---+---+
+```
+
+Dimensiunea unui vector este data de numarul de elemente inmultit cu dimensiunea unui element.
+
+```
+dimensiunea_vectorului = numar_elemente * dimensiune_element <-> sizeof(vector) = numar_elemente * sizeof(element)
+```
+
+Observatie: Indexul primului element al unui vector este 0, iar indexul ultimului element este `numar_elemente - 1`.
+
 ### Declararea unui vector
 
 Un vector se declara specificand tipul de date al elementelor si numarul de elemente ale vectorului.
@@ -72,6 +90,26 @@ for (int i = 0; i < 5; i++) {
 ## Matrici
 
 O matrice este o colectie de elemente de acelasi tip de date organizate pe linii si coloane.
+
+### Reprezentarea în memorie a unei matrici
+
+O matrice este reprezentata in memorie ca un bloc continuu de elemente de acelasi tip de date organizate pe linii si
+coloane.
+
+```
++---+---+---+
+| 1 | 2 | 3 |
++---+---+---+
+| 4 | 5 | 6 |
++---+---+---+
+```
+
+Dimensiunea unei matrici este data de numarul de linii inmultit cu numarul de coloane inmultit cu dimensiunea unui
+element.
+
+```
+dimensiunea_matricei = numar_linii * numar_coloane * dimensiune_element <-> sizeof(matrice) = numar_linii * numar_coloane * sizeof(element)
+```
 
 ### Declararea unei matrici
 
