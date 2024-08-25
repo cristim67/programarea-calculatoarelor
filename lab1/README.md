@@ -1,13 +1,13 @@
-# Laborator 1: Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Tipuri de variabile, Operatori
+# Laborator 1
 
 ## Cuprins
 
-1. Familiarizarea cu mediul de dezvoltare CLion.
-2. Înțelegerea procesului de compilare și debugging.
-3. Crearea și utilizarea unui fișier Makefile pentru automatizarea compilării.
-4. Tipuri de variabile
-5. Operatori
-6. Exercitii
+- [1. Introducere în CLion](#1-introducere-în-clion)
+- [2. Compilare și Debugging în CLion](#2-compilare-și-debugging-în-clion)
+- [Tipuri de variabile](#tipuri-de-variabile)
+- [Conversii de Tipuri](#conversii-de-tipuri)
+- [Operatori](#operatori)
+- [Exerciții](#exerciții)
 
 ## 1. Introducere în CLion
 
@@ -20,12 +20,8 @@ CLion este un IDE (Integrated Development Environment) dezvoltat de JetBrains, d
 2. **Primul proiect:**
 
     - Deschideți CLion și creați un nou proiect C++.
-
-   <img src="../assets/img.png" alt="CLion New Project" width="600">
-
     - Selectați „Create New Project” și alegeți „C++ Executable”.
-
-   <img src="../assets/img_1.png" alt="CLion New Project" width="600">
+    - Alegeți un nume pentru proiect și apăsați „Create”.
 
 ## 2. Compilare și Debugging în CLion
 
@@ -87,17 +83,15 @@ Exemplu de declarație și inițializare a unei variabile:
 using namespace std;
 
 int main() {
-    int x = 10;
-    float y = 3.14;
-    double pi = 3.14159;
-    char z = 'A';
-    bool b = true;
+    int a = 10;
+    float b = 3.14;
+    char c = 'A';
+    bool d = true;
 
-    cout << "x = " << x << endl;
-    cout << "y = " << y << endl;
-    cout << "pi = " << pi << endl;
-    cout << "z = " << z << endl;
+    cout << "a = " << a << endl;
     cout << "b = " << b << endl;
+    cout << "c = " << c << endl;
+    cout << "d = " << d << endl;
 
     return 0;
 }
@@ -304,6 +298,15 @@ Operatorul ternar `?:` este un operator condițional care returnează o valoare 
 <expresie_booleana> ? <valoare_daca_adevarat> : <valoare_daca_fals>
 ```
 
+### Indexare
+
+Operatorul de indexare `[]` este folosit pentru a accesa elementele unui array sau ale unui vector.
+
+```cpp
+int a[5] = {1, 2, 3, 4, 5};
+cout << a[2] << endl; // 3
+```
+
 ### Bitwise
 
 | Operator | Descriere           | Exemplu  |
@@ -340,12 +343,14 @@ int main() {
 
 ## Exerciții
 
-1. **Scrieți un program care primește de la tastatură trei numere reale `a` și `b` și `c` și afișează maximul dintre ele
-   folosind
-   operatorul ternar `?:`.**
-2. **Scrieți un program care primește de la utilizator un număr întreg și afișează `true` dacă numărul este par și
-   `false` în caz contrar, folosind operatorul de bitwise `&`.**
-3. **Scrieți un program care primește de la tastatură un număr întreg și afișează `true` dacă numărul este pozitiv și
-   `false` în caz contrar, folosind operatorul de bitwise `>>`.**
+| Nr. | Descriere                                                                                                                                                                         | Input           | Output                                          | Explicație                                                                                                                                 |
+|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.  | **Scrieți un program care primește de la tastatură un număr real `a` și afișează partea întreagă și cea fracționară a acestuia.**                                                 | `12.34`         | `Partea întreagă: 12, Partea fracționară: 0.34` | Partea întreagă a unui număr real este ce se află înainte de virgulă, iar partea fracționară este ce se află după virgulă.                 |
+| 2.  | **Scrieți un program care primește de la tastatură trei numere reale `a`, `b`, și `c` și afișează maximul dintre ele folosind operatorul ternar `?:`.**                           | `5.5, 3.2, 7.8` | `Maximul este 7.8`                              | In exemplu dat, `7.8` este maximul dintre `5.5`, `3.2`.                                                                                    |
+| 3.  | **Scrieți un program care primește de la tastatură un număr întreg `a` și afișează numărul necesar de biți pentru a reprezenta numărul `a` în binar.**                            | `10`            | `4 biți`                                        | În acest caz, numărul `10` în binar este `1010`, care necesită 4 biți.                                                                     |
+| 4.  | **Scrieți un program care primește de la tastatură un număr întreg și afișează `true` dacă numărul este par și `false` în caz contrar, folosind operatorul de bitwise `&`.**      | `8`             | `true`                                          | În acest caz, `8` este par, deci output-ul ar trebui să fie `true`. Gândiți-vă la cum funcționează verificarea parității la nivel de biți. |
+| 5.  | **Scrieți un program care primește de la tastatură un număr întreg și afișează `true` dacă numărul este pozitiv și `false` în caz contrar, folosind operatorul de bitwise `>>`.** | `-5`            | `false`                                         | Input-ul este `-5`, un număr negativ, astfel output-ul trebuie să fie `false`. Verificați semnul numărului folosind operații pe biți.      |
 
 ## Ați terminat laboratorul 1! Felicitări! 🎉
+
+[Înapoi la Cuprins](#cuprins)

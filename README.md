@@ -3,16 +3,29 @@
 ## Cuprins
 
 - [Laborator 1](./lab1/README.md): Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Tipuri de Date, Operatori
-- [Laborator 2](./lab2/README.md): Functii matematice, Structuri de Control: if, switch, while, do-while, for
-- [Laborator 3](./lab3/README.md): Structuri de Control: if, switch, while, do-while, for
-- [Laborator 4](./lab4/README.md): Programare Modulara: Functii
-- [Laborator 5](./lab5/README.md): Operatii pe biti, Shiftari, Masca de biti
-- [Laborator 6](./lab6/README.md): Siruri de caractere
-- [Laborator 7](./lab7/README.md): Vectori si Matrici
-- [Laborator 8](./lab8/README.md): Pointeri
-- [Laborator 9](./lab9/README.md): STL: vector, pair, set, map, tuple
-- [Laborator 10](./lab10/README.md): Sortari: bubble sort, quick sort, merge sort
-- [Laborator 11](./lab11/README.md): Fisiere: citire, scriere, operatii pe fisiere
-- [Laborator 12](./lab12/README.md): Structuri, Uniuni, Clase
-- [Laborator 13](./lab13/README.md): Clase: getteri, setteri, constructori, destructori, supraincarcare operatori, protectie
-- [Laborator 14](./lab14/README.md): Recapitulare
+
+[//]: # (- [Laborator 2]&#40;./lab2/README.md&#41;: Functii matematice, Structuri de Control: if, switch, while, do-while, for)
+
+[//]: # (- [Laborator 3]&#40;./lab3/README.md&#41;: Structuri de Control: if, switch, while, do-while, for)
+
+[//]: # (- [Laborator 4]&#40;./lab4/README.md&#41;: Programare Modulara: Functii)
+
+[//]: # (- [Laborator 5]&#40;./lab5/README.md&#41;: Operatii pe biti, Shiftari, Masca de biti)
+
+[//]: # (- [Laborator 6]&#40;./lab6/README.md&#41;: Siruri de caractere)
+
+[//]: # (- [Laborator 7]&#40;./lab7/README.md&#41;: Vectori si Matrici)
+
+[//]: # (- [Laborator 8]&#40;./lab8/README.md&#41;: Pointeri)
+
+[//]: # (- [Laborator 9]&#40;./lab9/README.md&#41;: STL: vector, pair, set, map, tuple)
+
+[//]: # (- [Laborator 10]&#40;./lab10/README.md&#41;: Sortari: bubble sort, quick sort, merge sort)
+
+[//]: # (- [Laborator 11]&#40;./lab11/README.md&#41;: Fisiere: citire, scriere, operatii pe fisiere)
+
+[//]: # (- [Laborator 12]&#40;./lab12/README.md&#41;: Structuri, Uniuni, Clase)
+
+[//]: # (- [Laborator 13]&#40;./lab13/README.md&#41;: Clase: getteri, setteri, constructori, destructori, supraincarcare operatori, protectie)
+
+[//]: # (- [Laborator 14]&#40;./lab14/README.md&#41;: Recapitulare)
