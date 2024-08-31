@@ -17,7 +17,7 @@ CLion este un IDE (Integrated Development Environment) dezvoltat de JetBrains, d
 
 1. **Instalare CLion:** Descărcați și instalați CLion de
    pe [site-ul oficial JetBrains](https://www.jetbrains.com/clion/), [ghid de instalare](../assets/Instalare%20Clion%20+%20explicatie%20debugger.pdf).
-2. **Primul proiect:**
+2. **Primul proiect:**.
 
     - Deschideți CLion și creați un nou proiect C++.
     - Selectați „Create New Project” și alegeți „C++ Executable”.
