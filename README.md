@@ -1,31 +1,41 @@
-# Laboratoare programarea calculatoarelor
+# Website
 
-## Cuprins
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-- [Laborator 1](./lab1/README.md): Introducere în Mediul de Dezvoltare - CLion, Compilare, Debugging, Tipuri de Date, Operatori
+### Installation
 
-[//]: # (- [Laborator 2]&#40;./lab2/README.md&#41;: Functii matematice, Structuri de Control: if, switch, while, do-while, for)
+```
+$ yarn
+```
 
-[//]: # (- [Laborator 3]&#40;./lab3/README.md&#41;: Structuri de Control: if, switch, while, do-while, for)
+### Local Development
 
-[//]: # (- [Laborator 4]&#40;./lab4/README.md&#41;: Programare Modulara: Functii)
+```
+$ yarn start
+```
 
-[//]: # (- [Laborator 5]&#40;./lab5/README.md&#41;: Operatii pe biti, Shiftari, Masca de biti)
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-[//]: # (- [Laborator 6]&#40;./lab6/README.md&#41;: Siruri de caractere)
+### Build
 
-[//]: # (- [Laborator 7]&#40;./lab7/README.md&#41;: Vectori si Matrici)
+```
+$ yarn build
+```
 
-[//]: # (- [Laborator 8]&#40;./lab8/README.md&#41;: Pointeri)
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-[//]: # (- [Laborator 9]&#40;./lab9/README.md&#41;: STL: vector, pair, set, map, tuple)
+### Deployment
 
-[//]: # (- [Laborator 10]&#40;./lab10/README.md&#41;: Sortari: bubble sort, quick sort, merge sort)
+Using SSH:
 
-[//]: # (- [Laborator 11]&#40;./lab11/README.md&#41;: Fisiere: citire, scriere, operatii pe fisiere)
+```
+$ USE_SSH=true yarn deploy
+```
 
-[//]: # (- [Laborator 12]&#40;./lab12/README.md&#41;: Structuri, Uniuni, Clase)
+Not using SSH:
 
-[//]: # (- [Laborator 13]&#40;./lab13/README.md&#41;: Clase: getteri, setteri, constructori, destructori, supraincarcare operatori, protectie)
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
 
-[//]: # (- [Laborator 14]&#40;./lab14/README.md&#41;: Recapitulare)
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

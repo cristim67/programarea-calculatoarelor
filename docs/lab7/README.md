@@ -1,4 +1,4 @@
-# Laborator 7 - Sandard Template Library (STL)
+# Laborator 7
 
 ## Cuprins
 

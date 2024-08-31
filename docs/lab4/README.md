@@ -1,4 +1,4 @@
-# Laborator 4 - Vectori si Matrici
+# Laborator 4
 
 ## Cuprins
 

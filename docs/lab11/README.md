@@ -1,4 +1,4 @@
-# Laborator 11 - Clase: getteri, setteri, supraincarcare operatori
+# Laborator 11
 
 ## Cuprins
 

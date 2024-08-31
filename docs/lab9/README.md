@@ -1,4 +1,4 @@
-# Laborator 9 - Fisiere I/O
+# Laborator 9
 
 ## Cuprins
 

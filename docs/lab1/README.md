@@ -32,11 +32,14 @@ Compilarea este procesul de transformare a codului sursă în cod executabil. De
 
 1. **Scrierea unui program simplu:** Scrieți un program simplu în `main.cpp` care afișează „Hello, World!”.
 
-```cpp
+```cpp id=hello-world
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    cout << "Hello, World!" << endl;
+
     return 0;
 }
 ```

@@ -1,4 +1,4 @@
-# Laborator 8 - Sortari: bubble sort, quick sort, merge sort
+# Laborator 8
 
 ## Cuprins
 

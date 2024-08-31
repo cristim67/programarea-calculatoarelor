@@ -1,4 +1,4 @@
-# Laborator 10 - Structuri, Enum, Uniuni, Clase
+# Laborator 10
 
 ## Cuprins
 
