@@ -1,6 +1,9 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const config: Config = {
   title: 'PCLP Lab',
@@ -58,6 +61,12 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    algolia:{
+      apiKey: process.env.ALGOLIA_API_KEY,
+      indexName: 'YOUR_INDEX',
+      contextualSearch: true,
+      appId: process.env.ALGOLIA_APP_ID,
+    },
     liveCodeBlock: {
       playgroundPosition: 'bottom',
     },
