@@ -4,7 +4,8 @@
 
 - [1. Introducere în CLion](#1-introducere-în-clion)
 - [2. Compilare și Debugging în CLion](#2-compilare-și-debugging-în-clion)
-- [Tipuri de variabile](#tipuri-de-variabile)
+- [Variabile de date](#variabile-de-date)
+- [Tipuri de Date](#tipuri-de-date)
 - [Conversii de Tipuri](#conversii-de-tipuri)
 - [Operatori](#operatori)
 - [Exerciții](#exerciții)
@@ -32,7 +33,7 @@ Compilarea este procesul de transformare a codului sursă în cod executabil. De
 
 1. **Scrierea unui program simplu:** Scrieți un program simplu în `main.cpp` care afișează „Hello, World!”.
 
-```cpp id=hello-world
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -49,7 +50,11 @@ int main() {
 3. **Debugging:** Apăsați butonul `Debug` sau folosiți comanda `Shift + F9` pentru a rula programul în modul de
    debugging.
 
-## Tipuri de variabile
+:::warning Atentie:
+Pentru a folosi debugger-ul, asigurați-vă că ați setat breakpoint-uri în cod, apăsând pe marginea liniei de cod.
+:::
+
+## Variabile de date
 
 Definirea unei variabile înseamnă alocarea unui spațiu în memorie pentru stocarea unei valori. Acestea se declarăm prin
 următoarea sintaxă:
@@ -59,6 +64,58 @@ următoarea sintaxă:
 
 ex: int x;
 ```
+
+:::info Observație:
+Numele variabilelor trebuie să respecte anumite reguli:
+
+- ❌ nu trebuie să conțină spații (exemplu: ❌ `abc def`)
+- ❌ majoritatea simbolurilor speciale sunt interzise (exemplu: ❌ `abc@def`)
+- ✔ pot conține:
+   - ✔ caractere de la `a`-`z` și `A`-`Z` (exemplu: ✔ `abcDEF`)
+   - ✔ numere, dar nu la început (exemplu: ❌ `932abc`)
+   - ✔ underscores `_` (exemplu: ✔ `abc_def`)
+:::
+
+<details>
+<summary>ℹ️ Mai multe detalii despre underscore-uri</summary>
+<div>
+  Deși underscore-urile sunt permise, există câteva excepții:
+
+- Folosirea la începutul numelui variabilei, urmat de literă mare (exemplu: ❌ `_Xyz`)
+- Dublarea underscore-ului la începutul numelui (exemplu: ❌ `__xyz`)
+</div>
+</details>
+
+### Inițializarea
+
+Inițializarea este un pas opțional în crearea unei variabile și constă în atribuirea unei valori. 
+
+Cand cream o variabila putem să o lasam făra o valoare:
+```cpp
+int x;
+```
+sau putem să o inițializăm cu o valoare:
+```cpp
+int x = 5;
+```
+
+:::caution Fără inițializare
+O variabilă neinițializată, în interiorul unui bloc funcțional (de exemplu, în interiorul funcției `main`) va avea inițial
+o valoare imprevizibilă, nu va fi resetată la 0.
+
+Lăsarea unei variabile fără valoarea inițială poate cauza probleme mai târziu în cod.
+Uneori, totuși, s-ar putea să o sărim în mod intenționat.
+
+**Niciodată nu putem face operații pe o variabilă neinițializată!**
+:::
+
+:::info Observație:
+Punem `;` la sfârșitul fiecărei instrucțiuni.
+:::
+
+## Tipuri de Date
+
+Tipurile de date reprezintă categorii de valori care determină ce fel de date pot fi stocate și cum pot fi manipulate.
 
 ### Primitive
 
@@ -76,11 +133,16 @@ ex: int x;
 | **`unsigned char`**  | Caracter, poate stoca un caracter ASCII                                      | 1 byte     | \(0\) până la \(2^{8} - 1\)                      |
 | **`bool`**           | Valoare booleană, poate fi `true` sau `false`                                | 1 byte     | 0 sau 1                                          |
 
-Observație: 1 byte = 8 biți, iar un bit poate fi 0 sau 1.
+:::warning Atentie: 
+Tipurile de date menționate se scriu mereu cu litere mici. Asta inseamna că `C++` este un limbaj case-sensitive.
+:::
 
+:::info Observație:
+1 byte = 8 biți, iar un bit poate fi 0 sau 1.
+:::
 Exemplu de declarație și inițializare a unei variabile:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -99,12 +161,13 @@ int main() {
     return 0;
 }
 ```
-
+:::info
 Observații:
 
 - `#include <iostream>` este o directivă de preprocesare care include biblioteca standard de intrare/ieșire.
 - `cout` este un obiect de tip `ostream` care afișează date pe consolă.
 - `cin` este un obiect de tip `istream` care primește date de la utilizator.
+:::
 
 ### Compuse
 
@@ -114,6 +177,12 @@ Observații:
 | **`struct`**  | Grup de elemente de tipuri diferite, accesate prin nume | Variabilă                                   |
 | **`class`**   | Similar cu `struct`, dar cu metode și membri privați    | Variabilă                                   |
 | **`pointer`** | Variabilă care conține adresa unei alte variabile       | 4 bytes (pe 32-bit) sau 8 bytes (pe 64-bit) |
+
+:::info Observație:
+Un pointer este o variabilă care conține adresa unei alte variabile.
+
+Adresa este un număr care reprezintă locația în memorie a variabilei.
+:::
 
 ## Conversii de Tipuri
 
@@ -137,6 +206,10 @@ float a = 3.14;
 int b = (int) a; // explicit conversion
 ```
 
+:::warning Atentie:
+Conversia de la un tip de date mai mare la unul mai mic poate duce la pierderea de date.
+:::
+
 ## Operatori
 
 Operatorii sunt simboluri care efectuează operații pe variabile și valori.
@@ -153,7 +226,7 @@ Operatorii sunt simboluri care efectuează operații pe variabile și valori.
 
 Exemplu de utilizare a operatorilor aritmetici:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -172,6 +245,10 @@ int main() {
 }
 ```
 
+:::caution Atentie:
+Caracterul `^` nu reprezintă operatorul de ridicare la putere în `C++`. Pentru a calcula puterea unui număr, folosiți funcția `pow` din biblioteca `cmath`.
+:::
+
 ### Relaționali
 
 | Operator | Descriere         | Exemplu  |
@@ -185,7 +262,7 @@ int main() {
 
 Exemplu de utilizare a operatorilor relaționali:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -205,6 +282,10 @@ int main() {
 }
 ```
 
+:::info Observație:
+Operatorii relaționali întorc `1` pentru adevărat și `0` pentru fals.
+:::
+
 ### Logici
 
 | Operator | Descriere | Exemplu    |
@@ -215,7 +296,7 @@ int main() {
 
 Exemplu de utilizare a operatorilor logici:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -232,6 +313,11 @@ int main() {
 }
 ```
 
+:::info Observație:
+Operatorii logici întorc `1` pentru adevărat și `0` pentru fals.
+:::
+
+
 ### Incrementare și Decrementare
 
 | Operator | Descriere    | Exemplu |
@@ -241,7 +327,7 @@ int main() {
 
 Exemplu de utilizare a operatorilor de incrementare și decrementare:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -256,6 +342,11 @@ int main() {
 }
 ```
 
+:::info Observație:
+Operatorii de incrementare și decrementare pot fi folosiți și înainte de variabilă (`++a` sau `--a`). 
+Diferența este că, în cazul în care sunt folosiți înainte, valoarea variabilei este modificată înainte de a fi folosită.
+:::
+
 ### Asignare
 
 | Operator | Descriere             | Exemplu  |
@@ -268,7 +359,7 @@ int main() {
 
 Exemplu de utilizare a operatorilor de asignare:
 
-```cpp
+```cpp title="main.cpp"
 #include <iostream>
 
 using namespace std;
@@ -293,6 +384,12 @@ int main() {
 }
 ```
 
+:::info Observație:
+Operatorii de asignare pot fi folosiți pentru a scurta expresiile matematice. 
+
+De exemplu, `a += b` este echivalent cu `a = a + b`.
+:::
+
 ### Ternari
 
 Operatorul ternar `?:` este un operator condițional care returnează o valoare în funcție de o expresie booleană.
@@ -300,6 +397,10 @@ Operatorul ternar `?:` este un operator condițional care returnează o valoare 
 ```cpp
 <expresie_booleana> ? <valoare_daca_adevarat> : <valoare_daca_fals>
 ```
+
+:::info Observație:
+Operatorul ternar `?:` este echivalent cu un `if-else` simplu.
+:::
 
 ### Indexare
 
@@ -323,7 +424,7 @@ cout << a[2] << endl; // 3
 
 Exemplu de utilizare a operatorilor bitwise:
 
-```cpp
+```cpp title="main.cpp"
 
 #include <iostream>
 
@@ -344,6 +445,12 @@ int main() {
 }
 ```
 
+:::info Observație:
+- Lucrează la nivel de biți, ceea ce înseamnă că efectuează operații pe reprezentarea binară a unui număr.
+- Shiftarea la stânga (`<<`) și la dreapta (`>>`) este echivalentă cu înmulțirea și împărțirea cu 2.
+- Negarea pe biți (`~`) schimbă fiecare bit din număr.
+:::
+
 ## Exerciții
 
 | Nr. | Descriere                                                                                                                                                                         | Input           | Output                                          | Explicație                                                                                                                                 |
@@ -353,7 +460,3 @@ int main() {
 | 3.  | **Scrieți un program care primește de la tastatură un număr întreg `a` și afișează numărul necesar de biți pentru a reprezenta numărul `a` în binar.**                            | `10`            | `4 biți`                                        | În acest caz, numărul `10` în binar este `1010`, care necesită 4 biți.                                                                     |
 | 4.  | **Scrieți un program care primește de la tastatură un număr întreg și afișează `true` dacă numărul este par și `false` în caz contrar, folosind operatorul de bitwise `&`.**      | `8`             | `true`                                          | În acest caz, `8` este par, deci output-ul ar trebui să fie `true`. Gândiți-vă la cum funcționează verificarea parității la nivel de biți. |
 | 5.  | **Scrieți un program care primește de la tastatură un număr întreg și afișează `true` dacă numărul este pozitiv și `false` în caz contrar, folosind operatorul de bitwise `>>`.** | `-5`            | `false`                                         | Input-ul este `-5`, un număr negativ, astfel output-ul trebuie să fie `false`. Verificați semnul numărului folosind operații pe biți.      |
-
-## Ați terminat laboratorul 1! Felicitări! 🎉
-
-[Înapoi la Cuprins](#cuprins)
