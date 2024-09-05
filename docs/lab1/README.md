@@ -2,15 +2,15 @@
 
 ## Cuprins
 
-- [1. Introducere în CLion](#1-introducere-în-clion)
-- [2. Compilare și Debugging în CLion](#2-compilare-și-debugging-în-clion)
+- [Introducere în CLion](#introducere-în-clion)
+- [Compilare și Debugging în CLion](#compilare-și-debugging-în-clion)
 - [Variabile de date](#variabile-de-date)
 - [Tipuri de Date](#tipuri-de-date)
 - [Conversii de Tipuri](#conversii-de-tipuri)
 - [Operatori](#operatori)
 - [Exerciții](#exerciții)
 
-## 1. Introducere în CLion
+## Introducere în CLion
 
 CLion este un IDE (Integrated Development Environment) dezvoltat de JetBrains, destinat programării în C/C++.
 
@@ -24,7 +24,7 @@ CLion este un IDE (Integrated Development Environment) dezvoltat de JetBrains, d
     - Selectați „Create New Project” și alegeți „C++ Executable”.
     - Alegeți un nume pentru proiect și apăsați „Create”.
 
-## 2. Compilare și Debugging în CLion
+## Compilare și Debugging în CLion
 
 Compilarea este procesul de transformare a codului sursă în cod executabil. Debugging-ul este procesul de identificare
 și corectare a erorilor din cod.
