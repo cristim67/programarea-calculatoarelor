@@ -1,3 +1,8 @@
+---
+id: lab10
+title: Lab 10
+---
+
 # Laborator 10
 
 ## Cuprins

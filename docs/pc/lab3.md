@@ -1,3 +1,8 @@
+---
+id: lab3
+title: Lab 3
+---
+
 # Laborator 3
 
 ## Cuprins
@@ -6,9 +11,7 @@
 - [Apelarea unei functii](#apelarea-unei-functii)
 - [Valoarea returnata de o functie](#valoarea-returnata-de-o-functie)
 - [Parametrii unei functii](#parametrii-unei-functii)
-- [Recursivitate](#recursivitate)
-- [Reguli pentru functii recursive](#reguli-pentru-functii-recursive)
-- [Reguli de vizibilitate a variabilelor](#reguli-de-vizibilitate-a-variabilelor)
+- [Funcții recursive](#recursivitate)
 - [Exercitii](#exercitii)
 
 ## Definirea unei functii
@@ -35,6 +38,10 @@ int main() {
 }
 ```
 
+:::tip Observatie
+Functiile sunt definite in afara functiei `main`.
+:::
+
 ## Apelarea unei functii
 
 Apelarea unei functii se realizeaza prin specificarea numelui functiei si a listei de parametrii. Functia este apelata
@@ -60,6 +67,11 @@ void afisare(int x) {
 afisare(10);
 ```
 
+:::tip Observatie
+In cazul in care o functie nu returneaza nici o valoare, tipul de date al functiei este `void`.
+:::
+
+
 ```cpp
 // Definirea unei functii care returneaza o valoare
 int suma(int a, int b) {
@@ -71,6 +83,11 @@ int x = 5, y = 10;
 int rezultat = suma(x, y); // aici se returneaza o valoare de tip int
 cout << "Suma lui " << x << " si " << y << " este " << rezultat << endl;
 ```
+
+:::warning Atentie
+In cazul in care o functie returneaza o valoare, aceasta trebuie sa aiba un tip de date specificat in definitia
+functiei.
+:::
 
 ## Parametrii unei functii
 
@@ -86,7 +103,7 @@ tip_returnat nume_functie(tip_parametru parametru1, tip_parametru parametru2, ..
 
 ## Recursivitate
 
-Recursivitatea este o proprietate a functiilor care se apeleaza pe sine. O functie recursiva se apeleaza pe sine pana
+Recursivitatea este o proprietate a functiilor care se apeleaza pe sine. O functie recursiva se apeleaza pe sine pana cand se atinge un caz de baza. Recursivitatea este folosita pentru a rezolva probleme care pot fi impartite in subprobleme mai mici.
 
 ```cpp
 #include <iostream>
@@ -110,12 +127,18 @@ int main() {
 }
 ```
 
-## Reguli pentru functii recursive
+:::warning Atentie
 
 1. O functie recursiva trebuie sa aiba un caz de baza. Acesta este cazul in care recursivitatea se opreste.
 2. O functie recursiva trebuie sa aiba un caz de recursivitate. Acesta este cazul in care functia se apeleaza pe sine.
 
+:::
+
+:::info Observatie
+
 Ce se în cazul în care nu avem un caz de bază?
+
+Exemplu:
 
 ```cpp
 #include <iostream>
@@ -135,11 +158,19 @@ int main() {
 }
 ```
 
-## Reguli de vizibilitate a variabilelor
+În acest caz, funcția va continua să se apeleze recursiv până când se atinge limita de `stivă` a programului și va apărea o eroare de tip `stack overflow`.
 
-Variabilele declarate in interiorul unei functii sunt vizibile doar in interiorul functiei. Aceste variabile sunt
-denumite variabile locale. Variabilele declarate in afara functiilor sunt vizibile in toate functiile din program si sunt
-denumite variabile globale.
+Stiva este o zonă de memorie în care sunt stocate variabilele locale ale funcțiilor. Atunci când o funcție este apelată, aceasta alocă un spațiu în stivă pentru variabilele sale locale. Atunci când funcția se termină, spațiul alocat este eliberat.
+:::
+
+:::tip Observatie
+
+- Variabilele declarate în interiorul unei funcții sunt vizibile doar în interiorul funcției. Aceste variabile sunt denumite variabile locale. 
+
+- Variabilele declarate în afara funcțiilor sunt vizibile în toate funcțiile din program și sunt denumite variabile globale.
+
+
+Exemplu:
 
 ```cpp
 #include <iostream>
@@ -162,10 +193,14 @@ int main() {
     return 0;
 }
 ```
+
+Aici, variabila `x` este globală și este vizibilă în toate funcțiile din program,iar variabila `y` este locală și este vizibilă doar în funcția `afisare`.
+:::
+
 ## Exerciții
 
 | Nr. | Descriere | Input | Output | Explicație |
-|-----| --------- | ----- | ------ | --------- |
+|:---:|:---------:|:-----:|:------:|:---------:|
 | 1.  | **Să se implementeze o funcție care primește ca parametri trei numere reale `numar_de_impartit`, `impartitor` și `numar_de_impartiri` și returnează rezultatul împărțirii `numar_de_impartit` la `impartitor` de `numar_de_impartiri` ori. Funcția trebuie implementată atât iterativ, cât și recursiv.** | `numar_de_impartit = 100, impartitor = 2, numar_de_impartiri = 3` | `12.5` | Programul trebuie să realizeze succesiv împărțiri ale valorii inițiale de `numar_de_impartit`, împărțind-o de `numar_de_impartiri` ori cu `impartitor`. Se cere implementarea ambelor metode, iterativă și recursivă. |
 | 2.  | **Să se scrie o funcție care primește un număr întreg și returnează al `n`-lea termen din șirul Fibonacci. Funcția trebuie implementată atât iterativ, cât și recursiv.** | `n = 7` | `13` | Șirul Fibonacci este o secvență unde fiecare număr este suma celor două numere precedente. Trebuie să se calculeze termenul `n` din acest șir, folosind atât o abordare iterativă cât și una recursivă. |
 | 3.  | **Să se implementeze o funcție care verifică dacă un număr este palindrom folosind recursivitatea.** | `121` | `true` | Funcția trebuie să verifice dacă un număr este palindrom prin compararea cifrelor sale, lucrând recursiv de la marginile numărului spre centru. |

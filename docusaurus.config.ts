@@ -61,12 +61,12 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    algolia:{
-      apiKey: process.env.ALGOLIA_API_KEY,
-      indexName: 'YOUR_INDEX',
-      contextualSearch: true,
-      appId: process.env.ALGOLIA_APP_ID,
-    },
+    // algolia:{
+    //   apiKey: process.env.ALGOLIA_API_KEY,
+    //   indexName: 'YOUR_INDEX',
+    //   contextualSearch: true,
+    //   appId: process.env.ALGOLIA_APP_ID,
+    // },
     liveCodeBlock: {
       playgroundPosition: 'bottom',
     },

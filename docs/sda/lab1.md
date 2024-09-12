@@ -1,3 +1,8 @@
+---
+id: lab1
+title: Lab 1
+---
+
 # Laborator 1
 
 ## Cuprins
@@ -71,10 +76,10 @@ Numele variabilelor trebuie să respecte anumite reguli:
 - ❌ nu trebuie să conțină spații (exemplu: ❌ `abc def`)
 - ❌ majoritatea simbolurilor speciale sunt interzise (exemplu: ❌ `abc@def`)
 - ✔ pot conține:
-   - ✔ caractere de la `a`-`z` și `A`-`Z` (exemplu: ✔ `abcDEF`)
-   - ✔ numere, dar nu la început (exemplu: ❌ `932abc`)
-   - ✔ underscores `_` (exemplu: ✔ `abc_def`)
-:::
+    - ✔ caractere de la `a`-`z` și `A`-`Z` (exemplu: ✔ `abcDEF`)
+    - ✔ numere, dar nu la început (exemplu: ❌ `932abc`)
+    - ✔ underscores `_` (exemplu: ✔ `abc_def`)
+      :::
 
 <details>
 <summary>ℹ️ Mai multe detalii despre underscore-uri</summary>
@@ -88,7 +93,7 @@ Numele variabilelor trebuie să respecte anumite reguli:
 
 ### Inițializarea
 
-Inițializarea este un pas opțional în crearea unei variabile și constă în atribuirea unei valori. 
+Inițializarea este un pas opțional în crearea unei variabile și constă în atribuirea unei valori.
 
 Cand cream o variabila putem să o lasam făra o valoare:
 ```cpp
@@ -133,7 +138,7 @@ Tipurile de date reprezintă categorii de valori care determină ce fel de date 
 | **`unsigned char`**  | Caracter, poate stoca un caracter ASCII                                      | 1 byte     | \(0\) până la \(2^{8} - 1\)                      |
 | **`bool`**           | Valoare booleană, poate fi `true` sau `false`                                | 1 byte     | 0 sau 1                                          |
 
-:::warning Atentie: 
+:::warning Atentie:
 Tipurile de date menționate se scriu mereu cu litere mici. Asta inseamna că `C++` este un limbaj case-sensitive.
 :::
 
@@ -167,7 +172,7 @@ Observații:
 - `#include <iostream>` este o directivă de preprocesare care include biblioteca standard de intrare/ieșire.
 - `cout` este un obiect de tip `ostream` care afișează date pe consolă.
 - `cin` este un obiect de tip `istream` care primește date de la utilizator.
-:::
+  :::
 
 ### Compuse
 
@@ -343,7 +348,7 @@ int main() {
 ```
 
 :::info Observație:
-Operatorii de incrementare și decrementare pot fi folosiți și înainte de variabilă (`++a` sau `--a`). 
+Operatorii de incrementare și decrementare pot fi folosiți și înainte de variabilă (`++a` sau `--a`).
 Diferența este că, în cazul în care sunt folosiți înainte, valoarea variabilei este modificată înainte de a fi folosită.
 :::
 
@@ -385,7 +390,7 @@ int main() {
 ```
 
 :::info Observație:
-Operatorii de asignare pot fi folosiți pentru a scurta expresiile matematice. 
+Operatorii de asignare pot fi folosiți pentru a scurta expresiile matematice.
 
 De exemplu, `a += b` este echivalent cu `a = a + b`.
 :::
@@ -449,7 +454,7 @@ int main() {
 - Lucrează la nivel de biți, ceea ce înseamnă că efectuează operații pe reprezentarea binară a unui număr.
 - Shiftarea la stânga (`<<`) și la dreapta (`>>`) este echivalentă cu înmulțirea și împărțirea cu 2.
 - Negarea pe biți (`~`) schimbă fiecare bit din număr.
-:::
+  :::
 
 ## Exerciții
 
